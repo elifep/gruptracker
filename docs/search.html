@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/docs/searchStyle.css" rel="stylesheet">
+
+</head>
+<body>
+
+<h1><span>Filterable</span> Table</h1>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Artist/Band name</th>
+    <th>Members</th>
+    <th>Concert locations</th>
+    <th>First album date</th>
+    <th>Creation date</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+    {{range .}}
+    <tr>
+      <td>{{.ID}}</td>
+      <td>{{.Name}}</td>
+      <td>
+        <ul>
+          {{range .Members}}
+        <li>{{.}}</li>
+        {{end}}
+      </ul>
+     </td>
+     
+     <!--name ve members var -->
+    </tr>
+    {{end}}
+
+  {{range .}}
+  <tr>
+    <!-- Concert locations	First album date	Creation date -->
+    <td> <ul>
+       {{range .Index}}
+        {{range $key, $value := .DatesLocations}}
+          <td> <li>{{$key}}: {{$value}}</li></td>
+       {{end}}
+   {{end}}
+      
+       </ul></td> 
+  </tr>
+  {{end}}
+  </tbody>
+</table>
+  
+<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet');
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+body {
+background-color: bisque ;
+font-family: 'Sniglet', 'Helvetica Neue', sans-serif;
+color: #373737;
+}
+.heading>span {
+	display: block;
+	font-size: 2rem;
+}
+
+.filterSection {
+	font-size: 18px;
+	float: left;
+	width: 25%;
+	line-height: 50%;
+}
+
+.flexContainer {
+    display: flex;
+	flex-wrap: wrap ;
+    justify-content: center;
+}
+
+.flexItem{
+    background-color: #ebebeb;
+    margin: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem 0.4rem#78643c;
+    font-size: 1vw;
+    border:.15rem solid #8276cf;
+    border-radius:1rem;
+    line-height: 1vh;
+    text-align: center;
+}
+
+.flexItem:hover {
+	transform: scale(1.15);
+}
+.imgBorder{
+	border-radius: 7rem;
+}
+
+.filterSection p {
+  text-align: center;
+}
+
+.slideContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.slideContainer input[type=text] {
+  flex-grow: 1;
+}
+.slideItem {
+  display: inline;
+  width: 50%;
+}
+.slideItem input {
+  width: 95%;
+  border:.15rem solid #FABBAA;
+  border-radius: 2rem;
+}
+
+input[type=checkbox] {
+  display: inline;
+  cursor: pointer;
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+
+input[type='checkbox']:checked {
+  background: #ff0202;
+}
+
+input[type=text] {
+  text-align: center;
+}
+
+
+.slider {
+  width: 100%;
+  height: 15px;
+  background: #fabbaa;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #b9d8ba;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: white;
+  cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(-60px + 50vh);
+    position: relative;
+  text-align:center;
+  vertical-align:middle;
+}
+h1 {
+    font-family: 'Sniglet', cursive;
+    color: #ffffff;;
+    font-size: 3.1rem;
+    display: inline-block;
+    border: 1rem solid #665836;
+    padding: 1.2rem 2.1rem 1.4rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 6px #9e9a70, inset 0 0 40px rgba(127, 89, 30, 0.3),inset rgba(123 97 49 / 90%);
+    text-shadow: 0px 0px 5px #b5a15c, 0px 0px 10px #736437, 0px 0px 10px #a98f33, 0px 0px 80px rgba(143, 110, 29, 0.6), 0px 0px 100px rgba(123, 97, 49, 0.9);
+    z-index: 1;
+    position: relative;
+}
+h3 {
+  font-size:2rem;
+  font-family: 'Knewave';
+  color:#FABBAA;
+  text-shadow:
+	0 0 6px #BA051A,
+	0 0 40px rgba(186,5,26, 0.3),
+  0 0 100px rgba(186,5,26, 0.5);
+  text-align: center;
+}
+h1 span {
+   color:#373737;;
+   text-shadow:0px 0px 2px #333;
+}

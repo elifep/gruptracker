@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Card</title>
+    <link href="/docs/response.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <button onclick="goBack()" class="back-button">Geri</button> <!-- Geri Butonu -->
+            <div class="card-info">
+                <h2 class="card-title">{{.Name}}</h2>
+                <p><strong>Creation Date:</strong> {{.CreationDate}}</p>
+                <p><strong>First Album:</strong> {{.FirstAlbum}}</p>
+                <p><strong>Members:</strong></p>
+                <ul class="members-list">
+                    {{range .Members}}
+                        <li>{{.}}</li>
+                    {{end}}
+                </ul>
+            </div>
+            <div class="card-image">
+                <img src="{{.Image}}" alt="Image">
+            </div>
+        </div>
+        <div class="location-info">
+            <p><strong>Related Locations:</strong></p>
+            <ul>
+                {{range .Index}}
+                    {{range $key, $value := .DatesLocations}}
+                        <li>{{$key}}: {{$value}}</li>
+                    {{end}}
+                {{end}}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>
