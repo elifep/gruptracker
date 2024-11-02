@@ -38,8 +38,8 @@ And the last one, relation, does the link between all the other parts, artists, 
 You can see an example of a RESTful API [here](https://rickandmortyapi.com/)
 
 This project will help you learn about :
-Manipulation and storage of data.
-[JSON](https://www.json.org/json-en.html) files and format.
-HTML.
-Event creation and display.
-[Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events).
+1.Manipulation and storage of data.
+2.[JSON](https://www.json.org/json-en.html) files and format.
+3.HTML.
+4.Event creation and display.
+  1.[Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events).
