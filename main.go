@@ -24,14 +24,14 @@ type artistData struct {
 	Members      []string `json:"members"`
 	CreationDate int      `json:"creationDate"`
 	FirstAlbum   string   `json:"firstAlbum"`
-	// Index        []struct {
-	// 	ID        int      `json:"id"`
-	// 	Locations []string `json:"locations"`
-	// } `json:"index"`
+	// Index []struct {
+	// 	ID             int                 `json:"id"`
+	// 	DatesLocations map[string][]string `json:"datesLocations"`
+	// } `json:"index`
 	Index []struct {
-		ID             int                 `json:"id"`
-		DatesLocations map[string][]string `json:"datesLocations"`
-	} `json:"index`
+		ID             int                 "json:\"id\""
+		DatesLocations map[string][]string "json:\"datesLocations\""
+	}
 }
 
 // type Location struct {
@@ -49,10 +49,14 @@ type artistData struct {
 // }
 
 type Relation struct {
+	// Index []struct {
+	// 	ID             int                 `json:"id"`
+	// 	DatesLocations map[string][]string `json:"datesLocations"`
+	// } `json:"index`
 	Index []struct {
-		ID             int                 `json:"id"`
-		DatesLocations map[string][]string `json:"datesLocations"`
-	} `json:"index`
+		ID             int                 "json:\"id\""
+		DatesLocations map[string][]string "json:\"datesLocations\""
+	}
 }
 
 var allData []artistData
@@ -70,6 +74,7 @@ func main() {
 	allData = gatherDataUp("https://groupietrackers.herokuapp.com/api/artists")
 	// allLocations = gatherDataUp2("https://groupietrackers.herokuapp.com/api/locations")
 	// allDates = gatherDataUp3("https://groupietrackers.herokuapp.com/api/dates")
+	
 	allRelations = gatherDataUp4("https://groupietrackers.herokuapp.com/api/relation")
 
 	//for _, a := range allLocations {
